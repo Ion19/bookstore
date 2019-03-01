@@ -1,70 +1,10 @@
-/* define the book class 
+// define the book class 
 
  class Book {
     constructor(title,author,year){
         this.title=title; 
         this.author=author; 
-        this.year=year; 
-        this.id=id;
-    }
-
-    old () {
-        var old, currentYear; 
-        
-        currentYear =   new Date().getFullYear() ;
-        old = currentYear - (this.year) ; 
-        console.log (`this book was published ${old} years ago`) ;
-    }
-
-    delete (book) {
-        books = books.filter (b => {
-            return b.name != book.name 
-        })
-    }
-}; 
-
-
-
-
-    var add = document.getElementById('input-list'),
-        id=0;
- 
-
-
-    add.addEventListener('save', onsubmit = (e) => {
-       
-        var title = document.getElementById('title').value, 
-            author = document.getElementById('author').value,
-            year = document.getElementById('year').value; 
-            count=0, 
-            id+=1,
-            books=[],          
-            books[count] = new Book(title,author,year),
-            text = (`the book is ${books[count].title} is written by ${books[count].author} in ${books[count].year}`);
-            document.getElementById(`${id}`).innerHTML=text;
-            console.log(author); 
-            console.log(title);
-            console.log(year) ;
-            count+=1;
-            
-            e.preventDefault();
-            return false;
-        
-          
-
-        
-        
-    });
-
-    */ 
-
-
-   class Book {
-    constructor(title,author,year){
-        this.title=title; 
-        this.author=author; 
-        this.year=year; 
-        
+        this.year=year;     
     }
 
     old () {
@@ -77,22 +17,94 @@
 
     add () {
         let item = document.createElement('div');
-        let bookItem = `<h2> <strong>${this.title}</strong> <small>${this.old()}</small></h2> 
+        let bookItem = `<h2> <strong>${this.title}</strong> <small class="old">${this.old()}</small></h2> 
                               <p class="lead"> Author : ${this.author}</p>
                               <span>This book was published in ${this.year}</span> 
                                
                         ` ;
 
-        let deleteButton = `<button class="btn btn-lg btn-danger" id="delete">Delete</button>`; 
+        let deleteButton = `<button class="btn btn-lg btn-danger remove" onclick='removeClickHandler(this)' >Delete</button>`; 
         item.innerHTML+=(bookItem);
         item.innerHTML+=(deleteButton);
         document.getElementById('bookList');
         bookList.appendChild(item); 
-        return this ; 
+        
+        let finalList=[];
+        
+        
+        return finalList[count]=this ; 
     }
+
     
-}; 
+
+
+};
 
 
 
 
+   let add = document.getElementById('input-list'), 
+        bookList=document.getElementById('bookList'),
+        count=0; 
+ 
+
+
+    add.addEventListener('save', onsubmit = (e) => {
+       
+        let title = document.getElementById('title').value.toUpperCase(), 
+            author = document.getElementById('author').value,
+            year = document.getElementById('year').value;
+
+        if (title !== '' & author !=='' & year !== "" ){
+
+         let book = new Book(title,author,year);
+            book.add();     
+            
+            count+=1;
+
+            totalList(); 
+            
+            
+
+        } else { 
+            const warn = document.createElement('h2');
+            warn.classList.add('error');
+            warn.innerHTML=(`Error "Please enter all the inputs !!" `);
+            bookList.appendChild(warn);     
+            setTimeout(alert=()=> {
+                warn.remove(); 
+            }, 1500);
+        };
+
+        
+        e.preventDefault();
+        return false;
+    });
+
+    
+    function removeClickHandler(e){
+        e.parentElement.remove(), 
+        count-= 1 ;
+        totalList();
+    };
+    
+    const   totalList = () =>{
+    numverOFAddedBooks=document.getElementById('numberOFBooks'); 
+    numverOFAddedBooks.innerHTML=(`<h2> ${count} have been added to the list </h2>`);
+    }; 
+           
+    /*
+     if (title=='' && author=='' && year ==''){
+            msg = `<h2>please enter data to continue</h2>`, 
+            alert.innerHTML=(msg),
+            alert.classList.toggle("err");
+            
+           
+
+            } else {
+            msg = `<h2>Book Downloaded</h2>`, 
+            alert.innerHTML=(msg),
+            alert.classList.toggle("done");
+            }
+
+    */
