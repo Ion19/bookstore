@@ -1,0 +1,96 @@
+/* start Global Styling */ 
+
+
+
+
+
+
+/* End Global Styling */ 
+
+.layout {
+    background: url("../images/background.jpg") no-repeat center center fixed;
+    background-size: cover; 
+    -webkit-background-size:cover; 
+    width: 100%;
+    min-height: 650px;
+    position: relative;
+}
+
+.overlay { 
+    position: absolute;
+    width: 100%; 
+    height: 100%;
+    left: 0;
+    top: 0; 
+    right: 0; 
+    bottom: 0; 
+    background-color: rgba(1,1,1,0.5); 
+}
+
+.container{
+    padding-top: 30px;  
+}
+/* start right Side */
+.right-side { margin-top: 20px; }
+/* start input  */ 
+
+
+
+
+label {
+    font-size: 18px; 
+    text-transform: capitalize;
+    color: #ccc; 
+}
+input {
+
+    display: block; 
+    margin-bottom: 20px; 
+
+
+}
+
+.right-side .submit {
+    background-color: blueviolet; 
+    color: #fff; 
+}
+/* End input  */ 
+
+.count {
+    color: #fff; 
+    background-color: green; 
+    font-size:28px; 
+    text-transform: capitalize; 
+    font-weight: 700; 
+    padding: 2px; 
+    padding-left: 20px; 
+    border-radius: 5px; 
+}
+
+/* End Right Side   */ 
+
+
+/*Start left Side */ 
+
+.error { 
+color: red; 
+text-transform: capitalize; 
+font-size: 30px; 
+line-height: 1.7; 
+font-weight: bolder; 
+
+}
+
+.bookList {
+    max-height: 600px; 
+    min-height: 360px; 
+    overflow-y: scroll; 
+    border: 2px solid #FFF;
+    padding: 10px; 
+    color: #FFF; 
+    background-color: rgba(1,1,1,0.5);
+    }
+
+.bookList .old {
+    color: #ccc; 
+}

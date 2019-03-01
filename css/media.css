@@ -1,0 +1,113 @@
+/* Smartphone Screens XS */
+
+@media (max-width:767px)
+{
+    .navbar-nav > li > a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    }
+    
+    .header .h1 {
+        font-size: 29px;
+        
+    }
+
+    .header p {
+    
+        font-size: 16px;
+    }
+
+    .our-team .team {
+        text-align: center; 
+    }
+    .our-team .team img  {
+        margin: 10px auto; 
+    }
+
+    .download h3 {
+        font-size: 25px;
+        font-weight: 500;
+        line-height: 1.5;
+    }
+
+    .download h2 {
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    .testmonials .carousel-indicators {
+        margin-left: -2%;
+    }
+
+    .testmonials .slider-pic , 
+    .testmonials .slider-text,
+    .testmonials img  {
+        min-height: 250px; 
+        width: auto; 
+    }
+
+    .testmonials .slider-text .lead {
+        font-size: 14px;
+    }
+
+    .testmonials .item .slider-text span {
+        position: absolute;
+        left: 5%;
+        font-size: 11px;
+        bottom: 17%;
+    }
+}
+
+/* Small Screens S */
+
+@media (min-width:768px) and (max-width:991px)
+{
+    .navbar .img {
+        width: 150px;
+        height: 100px;
+    }
+
+    .header .h1 {
+        font-size: 45px;
+        
+    }
+    .header p {
+    
+        font-size: 18px;
+    }
+
+    .testmonials .carousel-indicators {
+        margin-left: -5%;
+    }
+    
+
+    .testmonials .slider-text .lead {
+        font-size: 17px;
+    }
+
+    .testmonials .item .slider-text span {
+        position: absolute;
+        left: 24%;
+        bottom: 25%;
+        font-size: 12px; 
+    }
+
+
+}
+
+/* Medium Screens M */
+
+@media (min-width:992px) and (max-width:1199px)
+{
+    
+    .testmonials .slider-text .lead {
+        font-size: 15px;
+    }
+}
+
+/* Large Screens Lg */
+
+@media (min-width:1200px)
+{
+    
+}

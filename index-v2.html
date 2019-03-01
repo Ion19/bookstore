@@ -1,0 +1,96 @@
+<!DOCTYPE HTML> 
+<HTML>
+
+<head>
+    <meta charset="utf-8"/>
+    <title> Project One </title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/media.css"/>
+
+</head>
+
+<body>
+
+   
+
+    <!--Start lay out-->
+        <section class="layout " >
+            <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+
+                <!--Start list items side / Left Side-->
+
+                <div class="col-md-6 col-sm-12 right-side">
+
+                    <div id="bookList" class="bookList">
+                        <h2 class="text-center"> THE BOOK LIST </h2>
+                    </div>
+                    
+                       
+                        
+    
+                </div>
+    
+
+                <!--End list items side / Left Side-->
+    
+                <!-- Start input side / Right side -->
+                <div class="col-md-6 col-sm-12 right-side">
+
+                    <form id="input-list">
+                        <div>
+                        <label>The Book Title</label>
+                        <input id="title"
+                        type="text"
+                        placeholder="Add the Book title"  
+                        class="form-control input-lg"
+                        />
+                        </div>
+                        <div>
+                        <label>The Book Author</label>
+                        <input id="author" 
+                        type="text" 
+                        placeholder="Add the Author Name"  
+                        class="form-control input-lg"
+                        />
+                        </div> 
+                        <div>
+                        <label>The Published year</label>
+                        <input id="year" 
+                        type="number"
+                        placeholder="Add the Published Year"  
+                        class="form-control input-lg"
+                        /> 
+                        </div>
+                            
+                        <input 
+                        type="submit"
+                        class="form-control submit input-lg"/>
+
+                                               
+                    </form>
+
+                    <div id="numberOFBooks" class="count" >
+                        
+                    </div>
+                    
+
+                </div>
+
+                <!--End input side / right side -->
+            </div>
+        </div>
+        </section>
+    <!--End lay out -->
+    <!-- jQuery  -->
+    <script src="js/jquery.js"></script>
+    <!-- Include bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/appv2.js"></script>
+</body>
+
+</HTML>
